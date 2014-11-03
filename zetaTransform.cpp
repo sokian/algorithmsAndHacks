@@ -56,7 +56,7 @@ vector<int> solve(const int &l, const int &r) {
 
     vector<int> ret(s[l].length(), 0);
     for (int i = 0; i < s[l].length(); ++i) {
-        ret[i] = (zetaTransform[l][i] - '0') * (zetaTransform[r][i] - '0');
+        ret[i] = zetaTransform[l][i] * zetaTransform[r][i];
     }
     return calculateZetaTransform(ret, true);
 }
